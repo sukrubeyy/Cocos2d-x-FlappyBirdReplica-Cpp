@@ -26,6 +26,7 @@ bool SplashScene::init()
 
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+
     this->scheduleOnce(CC_SCHEDULE_SELECTOR(SplashScene::mainMenuyeGir), Display_SplashSceneTime);
 
     //Sprite oluþturuyoruz background için.

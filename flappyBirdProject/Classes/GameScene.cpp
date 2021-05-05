@@ -1,5 +1,6 @@
 #include "GameScene.h"
 #include "Definitions.h"
+#include "GameOverScene.h"
 #include <iostream>
 
 USING_NS_CC;
@@ -39,8 +40,10 @@ bool GameScene::init()
     backGround->setScale(scale);
 
     this->addChild(backGround);
-    //unity'deki rigidbody gibi düþünebilirsin.
+    //unity'deki collider gibi düþünebilirsin.
     auto edgeBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 1);
+    edgeBody->setCollisionBitmask(Pipe_Collision_BitMask);
+    edgeBody->setContactTestBitmask(false);
     //Node oluþturuyoruz
     auto edgeNode = Node::create();
     //pozisyon veriyoruz
@@ -49,10 +52,13 @@ bool GameScene::init()
     //objeye þekil veriyoruz
     edgeNode->setPhysicsBody(edgeBody);
     this->addChild(edgeNode);
-
     this->schedule(CC_SCHEDULE_SELECTOR(GameScene::createPipe), Pipe_Spawn_Time*visibleSize.width);
-
     bird = new Bird(this);
+
+    auto eventListener = EventListenerPhysicsContact::create();
+    eventListener->onContactBegin = CC_CALLBACK_1(GameScene::contactBegin,this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(eventListener, this);
+
 
     return true;
 }
@@ -60,4 +66,20 @@ bool GameScene::init()
 void GameScene::createPipe(float time)
 {
     pipe.spawnPipe(this);
+}
+
+bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
+{
+    PhysicsBody* first = contact.getShapeA()->getBody();
+    PhysicsBody* second = contact.getShapeB()->getBody();
+
+    if ((Bird_Collision_BitMask==first->getCollisionBitmask() && Pipe_Collision_BitMask==second->getCollisionBitmask()) 
+                                                ||
+        (Bird_Collision_BitMask==second->getCollisionBitmask() && Pipe_Collision_BitMask==first->getCollisionBitmask()))
+    {
+        auto scene = GameOverScene::create();
+        Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_Time,scene));
+    }
+
+    return true;
 }

@@ -12,4 +12,8 @@
 #define lower_screen_pipe_ 0.35
 #define	pipe_speed 0.01
 
+#define Bird_Collision_BitMask 0x000001
+#define Pipe_Collision_BitMask 0x000002
+
+
 #endif // __Definitions_H__

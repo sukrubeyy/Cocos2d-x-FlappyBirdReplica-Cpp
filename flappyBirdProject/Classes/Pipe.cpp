@@ -19,6 +19,12 @@ void Pipe ::spawnPipe(cocos2d::Layer*layer)
 	auto topPipeBody = PhysicsBody::createBox(topPipe->getContentSize());
 	auto bottomPipeBody = PhysicsBody::createBox(bottomPipe->getContentSize());
 
+	topPipeBody->setCollisionBitmask(Pipe_Collision_BitMask);
+	topPipeBody->setContactTestBitmask(true);
+
+	bottomPipeBody->setCollisionBitmask(Pipe_Collision_BitMask);
+	bottomPipeBody->setContactTestBitmask(true);
+
 	auto random = CCRANDOM_0_1();
 	if (random < lower_screen_pipe_)
 	{

@@ -16,7 +16,10 @@ public:
 
 private:
     void SetPhysicsWorld(cocos2d::PhysicsWorld* world) { 
-        sceneWorld = world; };
+    sceneWorld = world; };
+
+    bool contactBegin(cocos2d::PhysicsContact &contact);
+
     void createPipe(float timer);
     cocos2d::PhysicsWorld* sceneWorld;
     Pipe pipe;
