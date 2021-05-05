@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F39F970C-ABEC-347B-886F-D8ABB7FD5A28}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject -BD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build --check-stamp-file D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CMake\share\cmake-3.20\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseLibraryArchitecture.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.20\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCXXCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeRCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject -BD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build --check-stamp-file D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CMake\share\cmake-3.20\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseLibraryArchitecture.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.20\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCXXCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeRCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject -BD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build --check-stamp-file D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\CMake\share\cmake-3.20\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseLibraryArchitecture.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.20\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCXXCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeRCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\CMake\bin\cmake.exe -SD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject -BD:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build --check-stamp-file D:/Cocos2d-X-Projeler/Cocos2d-x-FlappyBirdReplica-Cpp/flappyBirdProject/win32Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\CMake\share\cmake-3.20\Modules\CMakeCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCCompilerABI.c;C:\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp;C:\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeCompilerIdDetection.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompileFeatures.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerABI.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineCompilerId.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeDetermineSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeFindBinUtils.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseArguments.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeParseLibraryArchitecture.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeRCCompiler.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystem.cmake.in;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCXXCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestCompilerCommon.cmake;C:\CMake\share\cmake-3.20\Modules\CMakeTestRCCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TI-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\CMake\share\cmake-3.20\Modules\CompilerId\VS-10.vcxproj.in;C:\CMake\share\cmake-3.20\Modules\Internal\FeatureTesting.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-Determine-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeCXXCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeRCCompiler.cmake;D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\3.20.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\ZERO_CHECK.vcxproj">
+      <Project>{7ECAB76D-87B5-31DB-84C9-38626B9BF48A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\SYNC_RESOURCE-flappyBirdProject.vcxproj">
+      <Project>{5B2B045B-3CD4-3A1E-93BE-0639F43E0D35}</Project>
+      <Name>SYNC_RESOURCE-flappyBirdProject</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{6F30651D-82A8-3A27-AE86-2BFB0C577A8C}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{6313A6A3-F51A-3BB2-AC34-B41A240A4DBF}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{65DEC0D8-D4DD-3D23-8BD1-DC6DF2915698}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{EDB7F02D-BF89-388C-B031-153DA0135109}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\md5\ext_md5.vcxproj">
+      <Project>{9EAC0028-0B74-3623-A17D-32B9977C7B08}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{3489E53D-7E59-3C65-9983-A47D17ABD105}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\recast\ext_recast.vcxproj">
+      <Project>{06A12CFE-FC4D-3C43-A4BD-D52CECDF3172}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{3306B26B-1DA9-3AC1-AF5E-7029F86D8465}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{34117B98-48C2-38DB-B5A7-25BB15F75C84}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{367F20E5-34A5-34C2-B853-6F5EEDD32179}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{EA8EC042-7345-33A5-BB2C-3D9F93590BBF}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\engine\external\external.vcxproj">
+      <Project>{FC21EE2A-CEB2-3971-95B9-1E3912EAEBFF}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\flappyBirdProject.vcxproj">
+      <Project>{0AA3255B-C7C0-3D95-876D-55D323C0AE17}</Project>
+      <Name>flappyBirdProject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

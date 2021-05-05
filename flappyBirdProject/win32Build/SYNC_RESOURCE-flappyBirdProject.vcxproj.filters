@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\dfd7d46f7ed10d3fd0b129bbbfa78f02\SYNC_RESOURCE-flappyBirdProject.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Cocos2d-X-Projeler\Cocos2d-x-FlappyBirdReplica-Cpp\flappyBirdProject\win32Build\CMakeFiles\SYNC_RESOURCE-flappyBirdProject" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F86A3315-DB29-3C8A-99AD-03550C886C2E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
