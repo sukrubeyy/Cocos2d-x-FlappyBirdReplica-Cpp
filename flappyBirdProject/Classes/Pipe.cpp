@@ -59,5 +59,21 @@ void Pipe ::spawnPipe(cocos2d::Layer*layer)
 	topPipe->runAction(topPipeAction);
 	bottomPipe->runAction(bottomPipeAction);
 
+	auto pointNode = Node::create();
+	auto pointBody = PhysicsBody::createBox(Size(1, Sprite::create("images/Ball.png")->getContentSize().height * Pipe_Gap));
+	pointBody->setDynamic(false);
+	pointBody->setCollisionBitmask(Point_Collision_BitMask);
+	pointBody->setContactTestBitmask(true);
+	pointNode->setPhysicsBody(pointBody);
+	pointNode->setPosition(topPipe->getPositionX(),topPipe->getPositionY()-(topPipe->getContentSize().height/2)-
+									((Sprite::create("images/Ball.png")->getContentSize().height * Pipe_Gap/2)));
+	layer->addChild(pointNode);
+	auto pointNodeAction = MoveBy::create(pipe_speed*visibleSize.width,Point(-visibleSize.width*1,0));
+	pointNode->runAction(pointNodeAction);
+
+	
+	
+
+
 }
 

@@ -1,28 +1,7 @@
-/****************************************************************************
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
- 
- http://www.cocos2d-x.org
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
- ****************************************************************************/
-
 #include "GameOverScene.h"
+#include "GameScene.h"
+#include "MainMenuScene.h"
+#include "Definitions.h"
 
 USING_NS_CC;
 
@@ -50,6 +29,39 @@ bool GameOverScene::init()
 
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-        
+
+    auto backGround = Sprite::create("images/background.png");
+    backGround->setPosition(Point(visibleSize.width / 2 + origin.x,
+        visibleSize.height / 2 + origin.y));
+
+    float scale = MAX(visibleSize.width / backGround->getContentSize().width,
+        visibleSize.height / backGround->getContentSize().height);
+    backGround->setScale(scale);
+
+    this->addChild(backGround);
+
+    auto retryItem = MenuItemImage::create("images/Retry Button.png","images/Retry Button Clicked.png",
+                            CC_CALLBACK_1(GameOverScene::goToGameScene,this));
+    retryItem->setPosition(Point(visibleSize.width/2+origin.x,visibleSize.height/4*3));
+
+    auto mainMenuItem = MenuItemImage::create("images/Menu Button.png","images/Menu Button Clicked.png",
+                        CC_CALLBACK_1(GameOverScene::goToMainMenuScene,this));
+    mainMenuItem->setPosition(Point(visibleSize.width/2+origin.x,visibleSize.height/4));
+
+    auto menu = Menu::create(retryItem,mainMenuItem,NULL);
+    menu->setPosition(Point::ZERO);
+    this->addChild(menu);
     return true;
+}
+
+void GameOverScene::goToGameScene(cocos2d::Ref* sender)
+{
+    auto scene = GameScene::createScene();
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_Time,scene));
+}
+
+void GameOverScene::goToMainMenuScene(cocos2d::Ref *sender)
+{
+    auto scene = MainMenuScene::createScene();
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_Time, scene));
 }

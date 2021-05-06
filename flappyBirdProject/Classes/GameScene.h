@@ -16,14 +16,18 @@ public:
 
 private:
     void SetPhysicsWorld(cocos2d::PhysicsWorld* world) { 
-    sceneWorld = world; };
-
+    sceneWorld = world; };  
+  
     bool contactBegin(cocos2d::PhysicsContact &contact);
-
+    bool touchBegin(cocos2d::Touch *touch , cocos2d::Event *event);
+    void stopFlying(float dt);
+    void update(float dt);
     void createPipe(float timer);
     cocos2d::PhysicsWorld* sceneWorld;
     Pipe pipe;
     Bird* bird;
+    unsigned int score;
+    cocos2d::Label* lblScore;
 };
 
 #endif // __GameScene_H__

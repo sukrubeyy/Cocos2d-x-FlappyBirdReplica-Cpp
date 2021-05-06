@@ -11,9 +11,11 @@ Scene* GameScene::createScene()
     auto scene = Scene::createWithPhysics();
     //Araþtýr
     scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    scene->getPhysicsWorld()->setGravity(Vect(0,0));
     auto layer = GameScene::create();
     //Araþtýr
     layer->SetPhysicsWorld(scene->getPhysicsWorld());
+    
 
     scene->addChild(layer);
 
@@ -43,7 +45,7 @@ bool GameScene::init()
     //unity'deki collider gibi düþünebilirsin.
     auto edgeBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 1);
     edgeBody->setCollisionBitmask(Pipe_Collision_BitMask);
-    edgeBody->setContactTestBitmask(false);
+    edgeBody->setContactTestBitmask(true);
     //Node oluþturuyoruz
     auto edgeNode = Node::create();
     //pozisyon veriyoruz
@@ -59,7 +61,14 @@ bool GameScene::init()
     eventListener->onContactBegin = CC_CALLBACK_1(GameScene::contactBegin,this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(eventListener, this);
 
+    auto touchListener = EventListenerTouchOneByOne::create();
+    touchListener->setSwallowTouches(true);
+    touchListener->onTouchBegan = CC_CALLBACK_2(GameScene::touchBegin,this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener,this);
+    score = 0;
+    
 
+    this->scheduleUpdate();
     return true;
 }
 
@@ -77,9 +86,35 @@ bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
                                                 ||
         (Bird_Collision_BitMask==second->getCollisionBitmask() && Pipe_Collision_BitMask==first->getCollisionBitmask()))
     {
+        CCLOG("Point Score Reset %i",score);
         auto scene = GameOverScene::create();
         Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_Time,scene));
     }
 
+    else if ((Bird_Collision_BitMask == first->getCollisionBitmask() && Point_Collision_BitMask == second->getCollisionBitmask()) 
+                                                        ||
+        (Bird_Collision_BitMask == second->getCollisionBitmask() && Point_Collision_BitMask == first->getCollisionBitmask()))
+    {
+        score++;
+        CCLOG("Point Score %i ",score);
+      
+    }
+
     return true;
+}
+
+bool GameScene::touchBegin(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+    bird->Fly();
+    this->scheduleOnce(CC_SCHEDULE_SELECTOR(GameScene::stopFlying), Bird_Duration);
+    return true;
+}
+
+void GameScene::stopFlying(float dt)
+{
+    bird->stopfly();
+}
+void GameScene::update(float dt)
+{
+    bird->fall();
 }
