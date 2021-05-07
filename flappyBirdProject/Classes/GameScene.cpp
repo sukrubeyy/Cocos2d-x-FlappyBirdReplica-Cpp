@@ -1,7 +1,8 @@
 #include "GameScene.h"
 #include "Definitions.h"
 #include "GameOverScene.h"
-#include <iostream>
+#include "ui/CocosGUI.h"
+
 
 USING_NS_CC;
 
@@ -65,8 +66,13 @@ bool GameScene::init()
     touchListener->setSwallowTouches(true);
     touchListener->onTouchBegan = CC_CALLBACK_2(GameScene::touchBegin,this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener,this);
+
     score = 0;
-    
+    auto tempScore = Label::createWithTTF(std::to_string(score), "fonts/Arial.ttf", 50);
+    lblScore = tempScore;
+    lblScore->setColor(Color3B::YELLOW);
+    lblScore->setPosition(visibleSize.width/2+origin.x,visibleSize.height*0.90+origin.y);
+    this->addChild(lblScore,10000000);
 
     this->scheduleUpdate();
     return true;
@@ -86,7 +92,6 @@ bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
                                                 ||
         (Bird_Collision_BitMask==second->getCollisionBitmask() && Pipe_Collision_BitMask==first->getCollisionBitmask()))
     {
-        CCLOG("Point Score Reset %i",score);
         auto scene = GameOverScene::create();
         Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_Time,scene));
     }
@@ -96,7 +101,8 @@ bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
         (Bird_Collision_BitMask == second->getCollisionBitmask() && Point_Collision_BitMask == first->getCollisionBitmask()))
     {
         score++;
-        CCLOG("Point Score %i ",score);
+         auto tempScore = Label::createWithTTF(std::to_string(score), "fonts/Arial.ttf", 50);
+         lblScore->setString(tempScore->getString());
       
     }
 
