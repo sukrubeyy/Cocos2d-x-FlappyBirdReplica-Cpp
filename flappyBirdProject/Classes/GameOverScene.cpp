@@ -5,8 +5,11 @@
 
 USING_NS_CC;
 
-Scene* GameOverScene::createScene()
+unsigned int score;
+
+Scene* GameOverScene::createScene(unsigned int tempScore)
 {
+    score = tempScore;
     return GameOverScene::create();
 }
 
@@ -51,6 +54,17 @@ bool GameOverScene::init()
     auto menu = Menu::create(retryItem,mainMenuItem,NULL);
     menu->setPosition(Point::ZERO);
     this->addChild(menu);
+
+
+    auto tempScore = Label::createWithTTF(std::to_string(score), "fonts/Arial.ttf", 50);
+    auto currentLblScore = tempScore;
+    currentLblScore->setColor(Color3B::YELLOW);
+    currentLblScore->setPosition(visibleSize.width / 2 + origin.x, visibleSize.height * 0.90 + origin.y);
+    this->addChild(currentLblScore, 10000000);
+
+
+
+
     return true;
 }
 

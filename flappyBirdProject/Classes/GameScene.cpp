@@ -92,7 +92,8 @@ bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
                                                 ||
         (Bird_Collision_BitMask==second->getCollisionBitmask() && Pipe_Collision_BitMask==first->getCollisionBitmask()))
     {
-        auto scene = GameOverScene::create();
+        auto scene = GameOverScene::createScene(score);
+       // scene->createScene(score);
         Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_Time,scene));
     }
 
@@ -100,7 +101,7 @@ bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
                                                         ||
         (Bird_Collision_BitMask == second->getCollisionBitmask() && Point_Collision_BitMask == first->getCollisionBitmask()))
     {
-        score++;
+         score++;
          auto tempScore = Label::createWithTTF(std::to_string(score), "fonts/Arial.ttf", 50);
          lblScore->setString(tempScore->getString());
       
