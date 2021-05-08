@@ -31,7 +31,7 @@ bool MainMenuScene::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto backGround = Sprite::create("images/background.png");
+    auto backGround = Sprite::create("images/back.png");
     backGround->setPosition(Point(visibleSize.width/2+origin.x,
                             visibleSize.height/2+origin.y));
 
@@ -43,12 +43,12 @@ bool MainMenuScene::init()
 
     auto playButton = MenuItemImage::create("images/Play Button.png","images/Play Button Clicked.png",
                                 CC_CALLBACK_1(MainMenuScene::OyunSahnesineGit,this));
-    playButton->setPosition(Point(visibleSize.width/2+origin.x,visibleSize.height/2+origin.y));
+    playButton->setPosition(Point(visibleSize.width/2+origin.x,visibleSize.height/3+origin.y));
     auto menu = Menu::create(playButton,NULL);
     menu->setPosition(Point::ZERO);
     this->addChild(menu);
 
-    auto textField = ui::TextField::create("Game Title","Arial",30 );
+    auto textField = ui::TextField::create("Flappy Bird Replica","Marker Felt",30 );
     textField->setPosition(Point(visibleSize.width/2+origin.x,
                             visibleSize.height-textField->getContentSize().height));
 

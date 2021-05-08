@@ -1,8 +1,7 @@
-
-
 #include "SplashScene.h"
 #include "MainMenuScene.h"
 #include "Definitions.h"
+#include <cocos/editor-support/cocostudio/SimpleAudioEngine.h>
 
 USING_NS_CC;
 
@@ -24,13 +23,18 @@ bool SplashScene::init()
         return false;
     }
 
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("sounds/Hit.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("sounds/Point.mp3");
+    CocosDenshion::SimpleAudioEngine::getInstance()->preloadEffect("sounds/Wing.mp3");
+    
+
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     this->scheduleOnce(CC_SCHEDULE_SELECTOR(SplashScene::mainMenuyeGir), Display_SplashSceneTime);
 
     //Sprite oluþturuyoruz background için.
-    auto SpriteBackground = Sprite::create("images/SplashScreen.png");
+    auto SpriteBackground = Sprite::create("images/hybrid_games.png");
     SpriteBackground->setPosition(Point(visibleSize.width / 2 + origin.x,
                                   visibleSize.height / 2 + origin.y));
     float scale = MAX(visibleSize.width/SpriteBackground->getContentSize().width,

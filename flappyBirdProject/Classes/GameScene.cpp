@@ -31,10 +31,11 @@ bool GameScene::init()
         return false;
     }
 
+
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
         
-    auto backGround = Sprite::create("images/background.png");
+    auto backGround = Sprite::create("images/back.png");
     backGround->setPosition(Point(visibleSize.width / 2 + origin.x,
     visibleSize.height / 2 + origin.y));
 
@@ -93,7 +94,8 @@ bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
         (Bird_Collision_BitMask==second->getCollisionBitmask() && Pipe_Collision_BitMask==first->getCollisionBitmask()))
     {
         auto scene = GameOverScene::createScene(score);
-       // scene->createScene(score);
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("sounds/Hit.mp3");
+
         Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_Time,scene));
     }
 
@@ -102,6 +104,7 @@ bool GameScene::contactBegin(cocos2d::PhysicsContact &contact)
         (Bird_Collision_BitMask == second->getCollisionBitmask() && Point_Collision_BitMask == first->getCollisionBitmask()))
     {
          score++;
+         CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("sounds/Point.mp3");
          auto tempScore = Label::createWithTTF(std::to_string(score), "fonts/Arial.ttf", 50);
          lblScore->setString(tempScore->getString());
       

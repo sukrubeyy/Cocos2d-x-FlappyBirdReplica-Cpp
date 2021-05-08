@@ -12,19 +12,20 @@ Pipe::Pipe()
 
 void Pipe ::spawnPipe(cocos2d::Layer*layer)
 {
-
+	
 
 	auto topPipe = Sprite::create("images/Pipe.png");
 	auto bottomPipe = Sprite::create("images/Pipe.png");
 	auto topPipeBody = PhysicsBody::createBox(topPipe->getContentSize());
-	auto bottomPipeBody = PhysicsBody::createBox(bottomPipe->getContentSize());
 
+	auto bottomPipeBody = PhysicsBody::createBox(bottomPipe->getContentSize());
+	
 	topPipeBody->setCollisionBitmask(Pipe_Collision_BitMask);
 	topPipeBody->setContactTestBitmask(true);
 
 	bottomPipeBody->setCollisionBitmask(Pipe_Collision_BitMask);
 	bottomPipeBody->setContactTestBitmask(true);
-
+	
 	auto random = CCRANDOM_0_1();
 	if (random < lower_screen_pipe_)
 	{
@@ -46,7 +47,7 @@ void Pipe ::spawnPipe(cocos2d::Layer*layer)
 	topPipe->setPosition(Point(visibleSize.width+topPipe->getContentSize().width+origin.x,topPipePos));
 
 	bottomPipe->setPosition(Point(topPipe->getPositionX(),
-							topPipePos-(Sprite::create("images/Ball.png")->
+							topPipePos-(Sprite::create("images/bird.png")->
 							getContentSize().height*Pipe_Gap)
 							-topPipe->getContentSize().height));
 
@@ -60,13 +61,13 @@ void Pipe ::spawnPipe(cocos2d::Layer*layer)
 	bottomPipe->runAction(bottomPipeAction);
 
 	auto pointNode = Node::create();
-	auto pointBody = PhysicsBody::createBox(Size(1, Sprite::create("images/Ball.png")->getContentSize().height * Pipe_Gap));
+	auto pointBody = PhysicsBody::createBox(Size(1, Sprite::create("images/bird.png")->getContentSize().height * Pipe_Gap));
 	pointBody->setDynamic(false);
 	pointBody->setCollisionBitmask(Point_Collision_BitMask);
 	pointBody->setContactTestBitmask(true);
 	pointNode->setPhysicsBody(pointBody);
 	pointNode->setPosition(topPipe->getPositionX(),topPipe->getPositionY()-(topPipe->getContentSize().height/2)-
-									((Sprite::create("images/Ball.png")->getContentSize().height * Pipe_Gap/2)));
+									((Sprite::create("images/bird.png")->getContentSize().height * Pipe_Gap/2)));
 	layer->addChild(pointNode);
 	auto pointNodeAction = MoveBy::create(pipe_speed*visibleSize.width,Point(-visibleSize.width*1,0));
 	pointNode->runAction(pointNodeAction);

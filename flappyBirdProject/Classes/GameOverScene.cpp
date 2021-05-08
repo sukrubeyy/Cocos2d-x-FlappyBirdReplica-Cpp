@@ -33,7 +33,7 @@ bool GameOverScene::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    auto backGround = Sprite::create("images/background.png");
+    auto backGround = Sprite::create("images/back.png");
     backGround->setPosition(Point(visibleSize.width / 2 + origin.x,
         visibleSize.height / 2 + origin.y));
 
@@ -55,12 +55,37 @@ bool GameOverScene::init()
     menu->setPosition(Point::ZERO);
     this->addChild(menu);
 
+    UserDefault* def = UserDefault::getInstance();
+    auto highScore = def->getIntegerForKey("highScore", 0);
+    if (score > highScore)
+    {
+        highScore = score;
+        def->setIntegerForKey("highScore",highScore);
+    }
+    def->flush();
 
-    auto tempScore = Label::createWithTTF(std::to_string(score), "fonts/Arial.ttf", 50);
-    auto currentLblScore = tempScore;
-    currentLblScore->setColor(Color3B::YELLOW);
-    currentLblScore->setPosition(visibleSize.width / 2 + origin.x, visibleSize.height * 0.90 + origin.y);
-    this->addChild(currentLblScore, 10000000);
+    auto highScoreTEXT = Label::createWithTTF("High Score", "fonts/Marker Felt.ttf", 50);
+    highScoreTEXT->enableShadow();
+    highScoreTEXT->setColor(Color3B::RED);
+    highScoreTEXT-> setPosition(visibleSize.width * 0.25 + origin.x, visibleSize.height * 0.90 + origin.y);
+    this->addChild(highScoreTEXT);
+
+    auto highScoreLbl = Label::createWithTTF(std::to_string(highScore), "fonts/Marker Felt.ttf", 50);
+    highScoreLbl->setColor(Color3B::YELLOW);
+    highScoreLbl->setPosition(visibleSize.width * 0.25 + origin.x, visibleSize.height * 0.80 + origin.y);
+    this->addChild(highScoreLbl);
+
+
+    auto tempScoreTEXT = Label::createWithTTF("Score", "fonts/Marker Felt.ttf", 50);
+    tempScoreTEXT->enableShadow();
+    tempScoreTEXT->setColor(Color3B::RED);
+    tempScoreTEXT->setPosition(visibleSize.width * 0.75 + origin.x, visibleSize.height * 0.90 + origin.y);
+    this->addChild(tempScoreTEXT);
+
+    auto tempScore = Label::createWithTTF(std::to_string(score), "fonts/Marker Felt.ttf", 50);
+    tempScore->setColor(Color3B::YELLOW);
+    tempScore->setPosition(visibleSize.width * 0.75 + origin.x, visibleSize.height * 0.80 + origin.y);
+    this->addChild(tempScore, 10000000);
 
 
 
